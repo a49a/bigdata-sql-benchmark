@@ -1,4 +1,4 @@
-package com.github.deadwind4;
+package com.github.deadwind4.benchmark.trino;
 
 import com.google.common.base.Preconditions;
 import org.apache.flink.api.java.tuple.Tuple2;

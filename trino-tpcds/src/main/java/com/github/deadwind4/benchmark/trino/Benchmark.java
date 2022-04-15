@@ -1,4 +1,4 @@
-package com.github.deadwind4;
+package com.github.deadwind4.benchmark.trino;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.DefaultParser;
@@ -13,9 +13,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Properties;
-
-import static com.github.deadwind4.QueryUtil.getQueries;
 
 public class Benchmark {
 
@@ -42,7 +39,7 @@ public class Benchmark {
         DefaultParser parser = new DefaultParser();
         CommandLine line = parser.parse(options, args, true);
         run(
-                getQueries(
+                QueryUtil.getQueries(
                         line.getOptionValue(LOCATION.getOpt()),
                         line.getOptionValue(QUERIES.getOpt())),
                 Integer.parseInt(line.getOptionValue(ITERATIONS.getOpt(), "1"))

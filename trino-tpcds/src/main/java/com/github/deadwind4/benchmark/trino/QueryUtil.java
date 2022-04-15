@@ -1,4 +1,4 @@
-package com.github.deadwind4;
+package com.github.deadwind4.benchmark.trino;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
