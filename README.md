@@ -1,1 +1,1 @@
-# trino-benchmark
+# flink-trino-benchmark
