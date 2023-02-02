@@ -45,7 +45,7 @@ public class Benchmark {
     private static Connection getConnection() {
         // URL parameters
 //                    "jdbc:trino://host:port/catalog/schema"
-        String url = "jdbc:presto://172.16.85.185:8080/hive3/tpcds_bin_orc_10";
+        String url = "jdbc:presto://172.16.85.185:8080/hive/tpcds_bin_orc_10";
         String uri = "jdbc:presto://trino_1:8080/hive3/tpcds_bin_orc_10";
 //        properties.setProperty("user", "test");
 //        properties.setProperty("password", "secret");
@@ -63,7 +63,7 @@ public class Benchmark {
     private static void run(LinkedHashMap<String, String> queries, int iterations) {
 
         try (Connection conn = getConnection()) {
-//            conn.createStatement().executeQuery("USE hive3.tpcds_bin_orc_10");
+            conn.createStatement().executeUpdate("set session use_mark_distinct = false");
             List<Tuple2<String, Long>> bestArray = new ArrayList<>();
             queries.forEach((name, sql) -> {
                 System.out.println("Start run query: " + name);

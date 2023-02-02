@@ -19,7 +19,12 @@
     <modules>
         <module>flink-tpcds</module>
         <module>presto-tpcds</module>
+        <module>presto-tpcds-241</module>
         <module>trino-tpcds</module>
+        <module>flink-kyuubi-tpcds</module>
+        <module>spark-iceberg</module>
+        <module>jdbc-common</module>
+        <module>hadoop-utilities</module>
     </modules>
 
     <dependencies>
@@ -55,6 +60,14 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>31.1-jre</version>
+        </dependency>
+
+        <!-- Flink Dependents Tuple -->
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-table-api-java-bridge_${scala.version}</artifactId>
+            <version>${flink.version}</version>
         </dependency>
 
         <!-- Test Dependents -->
