@@ -22,6 +22,7 @@
         <module>presto-tpcds-241</module>
         <module>trino-tpcds</module>
         <module>flink-kyuubi-tpcds</module>
+        <module>spark-hudi</module>
         <module>spark-iceberg</module>
         <module>jdbc-common</module>
         <module>hadoop-utilities</module>

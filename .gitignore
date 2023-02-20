@@ -43,3 +43,7 @@ out/
 *.ipr
 *.iws
 load_*_*.mk
+
+spark-hudi/src/main/resources/hive-site.xml
+spark-hudi/src/main/resources/hdfs-site.xml
+spark-hudi/src/main/resources/core-site.xml
